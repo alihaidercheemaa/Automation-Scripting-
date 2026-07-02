@@ -25,4 +25,4 @@ print(f"Current User         : {getpass.getuser()}")
 
 print(f"Working Directory    : {os.getcwd()}")
 
-print(f"Current date & Tim   :{datetime.now()}")
+print(f"Current date & Time  : {datetime.now()}")
