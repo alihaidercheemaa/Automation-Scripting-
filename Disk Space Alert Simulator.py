@@ -1,3 +1,9 @@
+# Project: Disk Space Alert Simulator
+# Author: Ali Haider
+# Description:
+# Simulates disk monitoring by checking disk usage
+# and displaying the appropriate status based on
+# predefined thresholds.
 
 from datetime import datetime
 
