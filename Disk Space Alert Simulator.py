@@ -8,10 +8,7 @@ disk_usage = float(input("Enter the disk usage percentage : ").strip())
 
 
 if disk_usage >= 0 and disk_usage <= 69:
-    if environment == "prod":
-        print(f"status: {server_name} is healthy")
-    else:
-        print(f"status: {server_name} is healthy")
+    print(f"status: {server_name} is healthy")
 elif disk_usage >= 70 and disk_usage <= 89:
     if environment == "prod":
         print(f"status: {server_name} has warning high disk usage")
@@ -25,4 +22,4 @@ elif disk_usage >= 90 and disk_usage <= 100:
 else:
     print("Error: Invalid disk usage percentage entered. Please enter a value between 0 and 100.")
 
-print(datetime.now())    
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))   
