@@ -22,7 +22,7 @@ elif disk_usage >= 70 and disk_usage <= 89:
         print(f"status: {server_name} Fix the disk usage before it went to production")
 elif disk_usage >= 90 and disk_usage <= 100:
     if environment == "prod":
-        print(f"status: {server_name} is critical")
+        print(f"status: {server_name} is critical high disk usage")
     else:
         print(f"status: {server_name} Fix the disk usage before it went to production")
 else:
