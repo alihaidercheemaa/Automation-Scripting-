@@ -21,14 +21,17 @@ servers = [
 for i, server in enumerate(servers, start=1):
     print("=" * 30)
     # mark every 3rd server as failed
-    status = "Failed" if i % 3 == 0 else "Success"
+    if i % 3 == 0:
+     status = "Failed"
+    else:
+     status = "Success"
     print(f"Pinging server: {i}. {server}")
     print(f"Status: {status}")
 
+count_success = sum(1 for i in range(1, len(servers) + 1) if i % 3 != 0)
+count_failed = len(servers) - count_success
 
-print("=" * 30)
-print("Total Servers Checked:", len(servers))
-print("\nSimulation Completed.")
-print("=" * 30)
+print(f"Successful Pings: {count_success}")
+print(f"Failed Pings: {count_failed}")
 
 print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
