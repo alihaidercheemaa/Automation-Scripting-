@@ -18,18 +18,26 @@ servers = [
     "storage-prod-01"
 ]
 
+count_success = 0
+count_failed = 0
+
 for i, server in enumerate(servers, start=1):
     print("=" * 30)
     # mark every 3rd server as failed
     if i % 3 == 0:
-     status = "Failed"
+      status = "Failed"
     else:
-     status = "Success"
-    print(f"Pinging server: {i}. {server}")
+      status = "Success"
+    print(f"Server Number: {i}")
+    print(f"Pinging server: {server}")
     print(f"Status: {status}")
 
-count_success = sum(1 for i in range(1, len(servers) + 1) if i % 3 != 0)
-count_failed = len(servers) - count_success
+    if status == "Success":
+      count_success += 1
+    else:
+      count_failed += 1
+
+
 
 print(f"Successful Pings: {count_success}")
 print(f"Failed Pings: {count_failed}")
