@@ -19,8 +19,11 @@ servers = [
 ]
 
 for i, server in enumerate(servers, start=1):
+    print("=" * 30)
+    # mark every 3rd server as failed
+    status = "Failed" if i % 3 == 0 else "Success"
     print(f"Pinging server: {i}. {server}")
-    print(f"Status: Successfully")
+    print(f"Status: {status}")
 
 
 print("=" * 30)
