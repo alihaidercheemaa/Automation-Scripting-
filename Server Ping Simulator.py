@@ -19,3 +19,9 @@ servers = [
 for server in servers:
     print(f"Pinging server: {server}...")
     print(f"Status: Successfully")
+
+
+print("=" * 30)
+print("Total Servers Checked:", len(servers))
+print("\nSimulation Completed.")
+print("=" * 30)
