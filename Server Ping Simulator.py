@@ -3,6 +3,8 @@
 # Description:
 # Ping multiple servers in a list using loops
 
+from datetime import datetime
+
 servers = [
     "web-prod-01",
     "web-prod-02",
@@ -25,3 +27,5 @@ print("=" * 30)
 print("Total Servers Checked:", len(servers))
 print("\nSimulation Completed.")
 print("=" * 30)
+
+print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
