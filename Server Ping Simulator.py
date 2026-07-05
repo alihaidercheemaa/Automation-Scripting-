@@ -16,8 +16,8 @@ servers = [
     "storage-prod-01"
 ]
 
-for server in servers:
-    print(f"Pinging server: {server}...")
+for i, server in enumerate(servers, start=1):
+    print(f"Pinging server: {i}. {server}")
     print(f"Status: Successfully")
 
 
