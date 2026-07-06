@@ -1,6 +1,5 @@
 # infrastructure_health_monitor
 # Author: Ali Haider   
-# Date: 2024-06-15
 
 ''' Scenario
     Imagine you're a Junior DevOps Engineer.
