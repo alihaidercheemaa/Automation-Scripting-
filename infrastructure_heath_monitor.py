@@ -83,7 +83,7 @@ servers = [
 ]
 
 for i, server in enumerate(servers, start=1):
-    if server["disk_space"] > 0 and server["disk_space"] <= 69:
+    if server["disk_space"] >= 0 and server["disk_space"] <= 69:
         status = "Healthy"
     elif server["disk_space"] >= 70 and server["disk_space"] <= 89:
         status = "Warning"
@@ -111,3 +111,6 @@ print(f"Critical Servers: {count_critical}")
 print(f"Total Servers: {len(servers)}")
 print(f"Report Generated At: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 30)
+
+if status == "Critical":
+    print("sending alert email to DevOps team...")
