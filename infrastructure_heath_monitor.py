@@ -78,9 +78,13 @@ servers = [
         "hostname": "backup_prod_2",
         "ip_address": "192.168.1.19",
         "environment": "production",
-        "disk_space": 90
+        "disk_space": 95
     }
 ]
+
+count_healthy = 0
+count_warning = 0
+count_critical = 0
 
 for i, server in enumerate(servers, start=1):
     if server["disk_space"] >= 0 and server["disk_space"] <= 69:
@@ -92,16 +96,12 @@ for i, server in enumerate(servers, start=1):
     print("=" * 30)
     print(f"\nServer {i}: {server['hostname']} \nDisk Space: {server['disk_space']}% \nStatus: {status}")
 
-count_healthy = 0
-count_warning = 0
-count_critical = 0
-
-if status == "Healthy":
-    count_healthy += 1
-elif status == "Warning":
-    count_warning += 1
-elif status == "Critical":
-    count_critical += 1
+    if status == "Healthy":
+        count_healthy += 1
+    elif status == "Warning":
+        count_warning += 1
+    elif status == "Critical":
+        count_critical += 1 
 
 print("=" * 30)
 print("Infrastructure Health Summary")
@@ -113,4 +113,4 @@ print(f"Report Generated At: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 30)
 
 if status == "Critical":
-    print("sending alert email to DevOps team...")
+    print("Send Email to DevOps team.")
