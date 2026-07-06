@@ -1,1 +1,2 @@
-New Script Daily
+New Automation Scripts Daily
+All Rights Reserved
