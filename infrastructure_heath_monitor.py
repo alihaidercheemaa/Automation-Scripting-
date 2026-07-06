@@ -91,3 +91,23 @@ for i, server in enumerate(servers, start=1):
         status = "Critical"
     print("=" * 30)
     print(f"\nServer {i}: {server['hostname']} \nDisk Space: {server['disk_space']}% \nStatus: {status}")
+
+count_healthy = 0
+count_warning = 0
+count_critical = 0
+
+if status == "Healthy":
+    count_healthy += 1
+elif status == "Warning":
+    count_warning += 1
+elif status == "Critical":
+    count_critical += 1
+
+print("=" * 30)
+print("Infrastructure Health Summary")
+print(f"Healthy Servers: {count_healthy}")
+print(f"Warning Servers: {count_warning}")
+print(f"Critical Servers: {count_critical}")
+print(f"Total Servers: {len(servers)}")
+print(f"Report Generated At: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print("=" * 30)
