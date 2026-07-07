@@ -24,10 +24,10 @@ servers = [
     {
     "hostname": "monitoring-prod-03",
     "environment": "production",
-    "cpu_usage": 53,
-    "ram_usage": 67,
-    "disk_usage": 71,
-    "status": "Running"
+    "cpu_usage": 95,
+    "ram_usage": 83,
+    "disk_usage": 91,
+    "status": "stopped"
     },
     {
     "hostname": "db-prod-01",
@@ -72,10 +72,10 @@ servers = [
     {
     "hostname": "storage-prod-02",
     "environment": "production",
-    "cpu_usage": 32,
-    "ram_usage": 45,
-    "disk_usage": 50,
-    "status": "Running"
+    "cpu_usage": 82,
+    "ram_usage": 95,
+    "disk_usage": 40,
+    "status": "stopped"
     }
 ]
 
