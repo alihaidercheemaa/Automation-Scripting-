@@ -79,6 +79,8 @@ servers = [
     }
 ]
 
+ready_server = 0
+stopped_server = 0
 
 for index, server in enumerate(servers, start=1):
     if server['cpu_usage'] < 80 and server['ram_usage'] < 80 and server['disk_usage'] < 80 and server['status'] == "Running":
@@ -91,6 +93,19 @@ for index, server in enumerate(servers, start=1):
         print(f"Status:        {server['status']}")
     else:
         print(f"Server {server['hostname']} is not ready for deployment. CPU, RAM, or Disk usage are high or server is not running.")
+
+    if  server['status'] == "Running":
+        ready_server += 1
+    elif server['status'] == "stopped":
+        stopped_server += 1
+
+print("=" * 30)
+print("Deployement Summary")
+print("=" * 30)
+print(f"Ready server: {ready_server}")
+print(f"Stopped server: {stopped_server}")
+print(f"Total server: {len(servers)}")
+print("=" * 30)
     
     
     
