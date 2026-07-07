@@ -12,7 +12,7 @@ servers = [
     "ram_usage": 62,
     "disk_usage": 55,
     "status": "Running"
-
+    
     },
     {
     "hostname": "web-prod-02",
