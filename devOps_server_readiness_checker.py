@@ -1,6 +1,8 @@
 # Script for checking whether the server is ready for deployment or not.
 # Author : Ali Haider
 
+from datetime import datetime
+
 servers = [
     {
     "hostname": "web-prod-01",
@@ -112,3 +114,5 @@ if ready_server == total_servers:
     print("All Servers are ready\nDeployment Approved")
 else:
     print("Deployment Blocked")
+
+print(datetime)
