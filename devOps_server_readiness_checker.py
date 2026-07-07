@@ -79,5 +79,18 @@ servers = [
     }
 ]
 
-for server in enumerate(servers):
-    if servers:
+
+for index, server in enumerate(servers, start=1):
+    if server['cpu_usage'] < 80 and server['ram_usage'] < 80 and server['disk_usage'] < 80 and server['status'] == "Running":
+        print("=" * 30)
+        print(f"Server Number: {index}")
+        print(f"Server Name:   {server['hostname']}")
+        print(f"environment:   {server['environment']}")
+        print(f"CPU Usage:     {server['cpu_usage']}%")
+        print(f"RAM Usage:     {server['ram_usage']}%")
+        print(f"Status:        {server['status']}")
+    else:
+        print(f"Server {server['hostname']} is not ready for deployment. CPU, RAM, or Disk usage are high or server is not running.")
+    
+    
+    
