@@ -81,6 +81,7 @@ servers = [
 
 ready_server = 0
 stopped_server = 0
+total_servers = len(servers)
 
 for index, server in enumerate(servers, start=1):
     if server['cpu_usage'] < 80 and server['ram_usage'] < 80 and server['disk_usage'] < 80 and server['status'] == "Running":
@@ -106,6 +107,8 @@ print(f"Ready server: {ready_server}")
 print(f"Stopped server: {stopped_server}")
 print(f"Total server: {len(servers)}")
 print("=" * 30)
-    
-    
-    
+
+if ready_server == total_servers:
+    print("All Servers are ready\nDeployment Approved")
+else:
+    print("Deployment Blocked")
