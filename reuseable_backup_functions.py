@@ -21,8 +21,13 @@ def backup_server(server_name):
         print("backup starting .....")
         print(f"Backing up: {server_name}")
         print("Backup completed")
-        return "succes"
 
 
-server = backup_server("web_prod_1")
-print(server)
+def backup_status(server_name):
+        return "Success"
+
+
+for server in servers:
+    backup_server(server)
+    status = backup_status(server)
+    print(f"Status for {server}: {status}")
