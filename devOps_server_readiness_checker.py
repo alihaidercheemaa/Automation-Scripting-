@@ -78,6 +78,14 @@ servers = [
     "ram_usage": 95,
     "disk_usage": 40,
     "status": "stopped"
+    },
+    {
+    "hostname": "logs-prod-01",
+    "environment": "production",
+    "cpu_usage": 32,
+    "ram_usage": 55,
+    "disk_usage": 60,
+    "status": "Running"
     }
 ]
 
