@@ -26,8 +26,24 @@ def backup_server(server_name):
 def backup_status(server_name):
         return "Success"
 
+Sucessful_backup = 0
+Failed_backup = 0
+total_servers = len(servers)
 
 for server in servers:
     backup_server(server)
     status = backup_status(server)
     print(f"Status for {server}: {status}")
+    
+    if  status == "Success":
+        Sucessful_backup += 1
+    elif status == "Failed":
+        Failed_backup += 1
+
+print("=" * 30)
+print("Backup Summary")
+print("=" * 30)
+print(f"Ready server: {Sucessful_backup}")
+print(f"Stopped server: {Failed_backup}")
+print(f"Total server: {len(servers)}")
+print("=" * 30)
