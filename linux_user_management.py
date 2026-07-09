@@ -33,13 +33,13 @@ server_users = [
     {
     "username": "Abdullah",
     "role": "QA",
-    "status": "unactive",
+    "status": "inactive",
     "sudo": False
     },
     {
     "username": "Bilal",
     "role": "Game Developer",
-    "status": "unactive",
+    "status": "inactive",
     "sudo": False
     },
     {
@@ -84,9 +84,9 @@ def deployment_access(user):
 
 deployment_allowed = 0
 deployment_denied = 0
-active_user = 0
-locked_user = 0
-total_user = len(server_users)
+active_users = 0
+inactive_users = 0
+total_users = len(server_users)
 
 for user in server_users:
     print("=" * 30)
@@ -98,11 +98,19 @@ for user in server_users:
         deployment_allowed += 1
     elif status == "denied":
         deployment_denied += 1
+    
+    if user["status"] == "active":
+        active_users += 1
+    elif user["status"] == "inactive":
+        inactive_users += 1
+
 
 print("=" * 30)
 print("Linux User Management Summary")
 print("=" * 30)
-print(f"Total Users: {total_user}")
+print(f"Total Users: {total_users}")
+print(f"Active Users: {active_users}")
+print(f"Inactive Users: {inactive_users}")
 print(f"Deployment Allowed: {deployment_allowed}")
 print(f"Deployment Denied: {deployment_denied}")
 print("=" * 30)
