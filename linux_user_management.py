@@ -3,63 +3,63 @@
 
 user = [
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "Ali",
+    "role": "devops",
+    "status": "active",
     "sudo": True
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "nabeel",
+    "role": "ai engineer",
+    "status": "active",
     "sudo": True
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "talha",
+    "role": "azure devops",
+    "status": "active",
     "sudo": True
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "zaid",
+    "role": "ai developer",
+    "status": "active",
     "sudo": True
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "abdullah",
+    "role": "qa",
+    "status": "unactive",
+    "sudo": False
+    },
+    {
+    "username": "bilal",
+    "role": "game developer",
+    "status": "unactive",
+    "sudo": False
+    },
+    {
+    "username": "husnain",
+    "role": "data analysis expert",
+    "status": "active",
+    "sudo": False
+    },
+    {
+    "username": "mamoon",
+    "role": "security expert",
+    "status": "active",
     "sudo": True
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
-    "sudo": True
+    "username": "hassan",
+    "role": "frontend developer",
+    "status": "active",
+    "sudo": False
     },
     {
-    "username": "...",
-    "role": "...",
-    "status": "...",
-    "sudo": True
-    },
-    {
-    "username": "...",
-    "role": "...",
-    "status": "...",
-    "sudo": True
-    },
-    {
-    "username": "...",
-    "role": "...",
-    "status": "...",
-    "sudo": True
-    },
-    {
-    "username": "...",
-    "role": "...",
-    "status": "...",
+    "username": "usman",
+    "role": "backend developer",
+    "status": "active",
     "sudo": True
     }
     ]
