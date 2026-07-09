@@ -9,25 +9,25 @@ server_users = [
     {
     "username": "Ali",
     "role": "devops",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     },
     {
     "username": "nabeel",
     "role": "ai engineer",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     },
     {
     "username": "talha",
     "role": "azure devops",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     },
     {
     "username": "zaid",
     "role": "ai developer",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     },
     {
@@ -45,25 +45,25 @@ server_users = [
     {
     "username": "husnain",
     "role": "data analysis expert",
-    "status": "active",
+    "status": "inactive",
     "sudo": False
     },
     {
     "username": "mamoon",
     "role": "security expert",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     },
     {
     "username": "hassan",
     "role": "frontend developer",
-    "status": "active",
+    "status": "inactive",
     "sudo": False
     },
     {
     "username": "usman",
     "role": "backend developer",
-    "status": "active",
+    "status": "inactive",
     "sudo": True
     }
     ]
@@ -82,7 +82,8 @@ def deployment_access(user):
     else:
         return "denied"
 
-for users in server_users:
-    check_user(users)
-    status = deployment_access(users)
+for user in server_users:
+    check_user(user)
+    status = deployment_access(user)
     print(f"Status: {status}")
+
