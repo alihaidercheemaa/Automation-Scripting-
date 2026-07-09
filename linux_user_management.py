@@ -1,7 +1,11 @@
 # Linux User Management using list, Dictionary, loops and conditional logic
 # Aurthor: Ali Haider
 
-server_user = [
+print("=" * 40)
+print("       Linux User Management")
+print("=" * 40)
+
+server_users = [
     {
     "username": "Ali",
     "role": "devops",
@@ -78,3 +82,7 @@ def deployment_access(user):
     else:
         return "denied"
 
+for users in server_users:
+    check_user(users)
+    status = deployment_access(users)
+    print(f"Status: {status}")
