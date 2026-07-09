@@ -1,7 +1,7 @@
 # Linux User Management using list, Dictionary, loops and conditional logic
 # Aurthor: Ali Haider
 
-user = [
+server_user = [
     {
     "username": "Ali",
     "role": "devops",
@@ -63,3 +63,18 @@ user = [
     "sudo": True
     }
     ]
+
+def check_user(user):
+    # Expecting a dict with keys: username, role, status, sudo
+    print(f"Username: {user['username']}")
+    print(f"Role: {user['role']}")
+    print(f"status: {user['status']}")
+    print(f"sudo: {user['sudo']}")
+
+def deployment_access(user):
+    # user is expected to be a dict; allow deployment only if status is 'active' and sudo is True
+    if user['status'] == 'active' and user['sudo']:
+        return "Allowed"
+    else:
+        return "denied"
+
