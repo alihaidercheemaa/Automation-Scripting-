@@ -9,25 +9,25 @@ server_users = [
     {
     "username": "Ali",
     "role": "DevOps",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     },
     {
     "username": "Nabeel",
     "role": "AI Engineer",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     },
     {
     "username": "Talha",
     "role": "Azure DevOps",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     },
     {
     "username": "Zaid",
     "role": "AI Developer",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     },
     {
@@ -45,25 +45,25 @@ server_users = [
     {
     "username": "Husnain",
     "role": "Data Analysis Expert",
-    "status": "inactive",
+    "status": "active",
     "sudo": False
     },
     {
     "username": "Mamoon",
     "role": "Security Expert",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     },
     {
     "username": "Hassan",
     "role": "Frontend Developer",
-    "status": "inactive",
+    "status": "active",
     "sudo": False
     },
     {
     "username": "Usman",
     "role": "Backend Developer",
-    "status": "inactive",
+    "status": "active",
     "sudo": True
     }
     ]
@@ -84,6 +84,8 @@ def deployment_access(user):
 
 deployment_allowed = 0
 deployment_denied = 0
+active_user = 0
+locked_user = 0
 total_user = len(server_users)
 
 for user in server_users:
@@ -100,7 +102,7 @@ for user in server_users:
 print("=" * 30)
 print("Linux User Management Summary")
 print("=" * 30)
-print(f"Total Users: {len(server_users)}")
+print(f"Total Users: {total_user}")
 print(f"Deployment Allowed: {deployment_allowed}")
 print(f"Deployment Denied: {deployment_denied}")
 print("=" * 30)
