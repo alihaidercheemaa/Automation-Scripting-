@@ -1,68 +1,68 @@
 # Linux User Management using list, Dictionary, loops and conditional logic
 # Aurthor: Ali Haider
 
-print("=" * 40)
-print("       Linux User Management")
-print("=" * 40)
+print("=" * 30)
+print("     Linux User Management")
+print("=" * 30)
 
 server_users = [
     {
     "username": "Ali",
-    "role": "devops",
+    "role": "DevOps",
     "status": "inactive",
     "sudo": True
     },
     {
-    "username": "nabeel",
-    "role": "ai engineer",
+    "username": "Nabeel",
+    "role": "AI Engineer",
     "status": "inactive",
     "sudo": True
     },
     {
-    "username": "talha",
-    "role": "azure devops",
+    "username": "Talha",
+    "role": "Azure DevOps",
     "status": "inactive",
     "sudo": True
     },
     {
-    "username": "zaid",
-    "role": "ai developer",
+    "username": "Zaid",
+    "role": "AI Developer",
     "status": "inactive",
     "sudo": True
     },
     {
-    "username": "abdullah",
-    "role": "qa",
+    "username": "Abdullah",
+    "role": "QA",
     "status": "unactive",
     "sudo": False
     },
     {
-    "username": "bilal",
-    "role": "game developer",
+    "username": "Bilal",
+    "role": "Game Developer",
     "status": "unactive",
     "sudo": False
     },
     {
-    "username": "husnain",
-    "role": "data analysis expert",
+    "username": "Husnain",
+    "role": "Data Analysis Expert",
     "status": "inactive",
     "sudo": False
     },
     {
-    "username": "mamoon",
-    "role": "security expert",
+    "username": "Mamoon",
+    "role": "Security Expert",
     "status": "inactive",
     "sudo": True
     },
     {
-    "username": "hassan",
-    "role": "frontend developer",
+    "username": "Hassan",
+    "role": "Frontend Developer",
     "status": "inactive",
     "sudo": False
     },
     {
-    "username": "usman",
-    "role": "backend developer",
+    "username": "Usman",
+    "role": "Backend Developer",
     "status": "inactive",
     "sudo": True
     }
@@ -82,8 +82,25 @@ def deployment_access(user):
     else:
         return "denied"
 
+deployment_allowed = 0
+deployment_denied = 0
+total_user = len(server_users)
+
 for user in server_users:
+    print("=" * 30)
     check_user(user)
     status = deployment_access(user)
     print(f"Status: {status}")
 
+    if status == "Allowed":
+        deployment_allowed += 1
+    elif status == "denied":
+        deployment_denied += 1
+
+print("=" * 30)
+print("Linux User Management Summary")
+print("=" * 30)
+print(f"Total Users: {len(server_users)}")
+print(f"Deployment Allowed: {deployment_allowed}")
+print(f"Deployment Denied: {deployment_denied}")
+print("=" * 30)
