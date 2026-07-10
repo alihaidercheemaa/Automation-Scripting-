@@ -106,7 +106,7 @@ for user in server_users:
 
 
 print("=" * 30)
-print("Linux User Management Summary")
+print("LINUX USER MANAGEMENT SYSTEM")
 print("=" * 30)
 print(f"Total Users: {total_users}")
 print(f"Active Users: {active_users}")
