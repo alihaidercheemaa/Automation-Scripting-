@@ -112,3 +112,20 @@ for service in services:
     else:
         unhealthy_services +=1
 
+print("=" * 30)
+print("INFRASTRUCTURE SUMMARY")
+print("=" * 30)
+print(f"Total Services: {total_services}")
+print(f"Running Services: {running_services}")
+print(f"Stopped Services: {stopped_services}")
+print(f"Healthy Services: {healthy_services}")
+print(f"Unhealthy Services: {unhealthy_services}")
+
+
+if running_services > stopped_services:
+    print("Deployment Allowed")
+else:
+    print("Deployment Denied")
+
+
+print("=" * 30)
