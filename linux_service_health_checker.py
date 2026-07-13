@@ -1,6 +1,10 @@
 # Linux Service Health Checker
 # Aurthor: Ali Haider
 
+print("=" * 40)
+print("        Infrastructure Summary")
+print("=" * 40)
+
 services = [
     {
         "service": "nginx",
@@ -73,3 +77,16 @@ services = [
         "restart_count": 0
     }
 ]
+
+def display_services(service):
+    print(f"Service: {service['service']}")
+    print(f"Status: {service['status']}")
+    print(f"Cpu: {service['cpu']}")
+    print(f"Memory: {service['memory']}")
+    print(f"Restart Count: {service['restart_count']}")
+
+def check_service(service):
+    if service['cpu'] <= 50 and service['restart_count'] <= 3:
+        return "Healthy"
+    else:
+        return "Unhealthy"
