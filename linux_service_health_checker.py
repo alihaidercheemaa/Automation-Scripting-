@@ -1,5 +1,5 @@
 # Linux Service Health Checker
-# Aurthor: Ali Haider
+# Author: Ali Haider
 
 print("=" * 40)
 print("        Infrastructure Summary")
@@ -80,9 +80,8 @@ services = [
 
 def display_services(service):
     print(f"Service: {service['service']}")
-    print(f"Status: {service['status']}")
-    print(f"Cpu: {service['cpu']}")
-    print(f"Memory: {service['memory']}")
+    print(f"CPU: {service['cpu']}%")
+    print(f"Memory: {service['memory']}%")
     print(f"Restart Count: {service['restart_count']}")
 
 def check_service(service):
@@ -90,3 +89,26 @@ def check_service(service):
         return "Healthy"
     else:
         return "Unhealthy"
+    
+healthy_services = 0
+unhealthy_services = 0
+running_services = 0
+stopped_services = 0
+total_services = len(services)
+
+for service in services:
+    print("=" * 30)
+    display_services(service)
+    status = check_service(service)
+    print(f"Status: {status}")
+
+    if service['status'] == 'running':
+        running_services += 1
+    else:
+        stopped_services +=1
+
+    if status == "Healthy":
+        healthy_services +=1
+    else:
+        unhealthy_services +=1
+
