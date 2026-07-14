@@ -1,10 +1,6 @@
 # Linux Service Health Checker
 # Author: Ali Haider
 
-print("=" * 40)
-print("        Infrastructure Summary")
-print("=" * 40)
-
 services = [
     {
         "service": "nginx",
