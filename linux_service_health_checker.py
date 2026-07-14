@@ -127,10 +127,10 @@ print(f"Healthy Services: {healthy_services}")
 print(f"Unhealthy Services: {unhealthy_services}")
 
 
-if running_services > stopped_services:
-    print("Deployment Allowed")
+if healthy_services == total_services:
+    print("\nDeployment Status : Allowed")
 else:
-    print("Deployment Denied")
+    print("\nDeployment Status : Denied")
 
 
 print("=" * 30)
