@@ -80,12 +80,12 @@ def display_services(service):
     print(f"Memory: {service['memory']}%")
     print(f"Restart Count: {service['restart_count']}")
 
-def check_service(service):
+def check_service(services):
     if (
-        service["status"] == "running"
-        and service["cpu"] < 80
-        and service["memory"] < 80
-        and service["restart_count"] < 5
+        services["status"] == "running"
+        and services["cpu"] < 80
+        and services["memory"] < 80
+        and services["restart_count"] < 5
     ):
         return "Healthy"
     else:
