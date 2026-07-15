@@ -13,7 +13,7 @@ services = [
         "service": "docker",
         "status": "running",
         "cpu": 35,
-        "memory": 55,
+        "memory": 56,
         "restart_count": 1
     },
     {
